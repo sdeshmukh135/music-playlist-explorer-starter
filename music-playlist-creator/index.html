@@ -18,12 +18,12 @@
     <main> 
         <!-- Your main content here -->
          <section class="playlist-cards">
-            <section class="playlist-card">
+            <!-- <section class="playlist-card">
                 <img src="assets/img/album1.jpeg"/>
                 <h3>Playlist Title</h3>
                 <h4>Creator Name</h4>
                 <div class="likes">
-                    <img src="assets/img/heart-icon.webp"/> <!--- heart icon goes here -->
+                    <img src="assets/img/heart-icon.webp"/> 
                     <h4>5</h4>
                 </div>
             </section>
@@ -33,7 +33,7 @@
                 <h3>Playlist Title</h3>
                 <h4>Creator Name</h4>
                 <div class="likes">
-                    <img src="assets/img/heart-icon.webp"/> <!--- heart icon goes here -->
+                    <img src="assets/img/heart-icon.webp"/>
                     <h4>5</h4>
                 </div>
             </section>
@@ -43,7 +43,7 @@
                 <h3>Playlist Title</h3>
                 <h4>Creator Name</h4>
                 <div class="likes">
-                    <img src="assets/img/heart-icon.webp"/> <!--- heart icon goes here -->
+                    <img src="assets/img/heart-icon.webp"/> 
                     <h4>5</h4>
                 </div>
             </section>
@@ -53,7 +53,7 @@
                 <h3>Playlist Title</h3>
                 <h4>Creator Name</h4>
                 <div class="likes">
-                    <img src="assets/img/heart-icon.webp"/> <!--- heart icon goes here -->
+                    <img src="assets/img/heart-icon.webp"/> 
                     <h4>5</h4>
                 </div>
             </section>
@@ -63,7 +63,7 @@
                 <h3>Playlist Title</h3>
                 <h4>Creator Name</h4>
                 <div class="likes">
-                    <img src="assets/img/heart-icon.webp"/> <!--- heart icon goes here -->
+                    <img src="assets/img/heart-icon.webp"/> 
                     <h4>5</h4>
                 </div>
             </section>
@@ -73,7 +73,7 @@
                 <h3>Playlist Title</h3>
                 <h4>Creator Name</h4>
                 <div class="likes">
-                    <img src="assets/img/heart-icon.webp"/> <!--- heart icon goes here -->
+                    <img src="assets/img/heart-icon.webp"/> 
                     <h4>5</h4>
                 </div>
             </section>
@@ -83,7 +83,7 @@
                 <h3>Playlist Title</h3>
                 <h4>Creator Name</h4>
                 <div class="likes">
-                    <img src="assets/img/heart-icon.webp"/> <!--- heart icon goes here -->
+                    <img src="assets/img/heart-icon.webp"/> 
                     <h4>5</h4>
                 </div>
             </section>
@@ -93,32 +93,54 @@
                 <h3>Playlist Title</h3>
                 <h4>Creator Name</h4>
                 <div class="likes">
-                    <img src="assets/img/heart-icon.webp"/> <!--- heart icon goes here -->
+                    <img src="assets/img/heart-icon.webp"/>
                     <h4>5</h4>
                 </div>
-
-                <div onclick="openModal({name: 'Summer Beats Festival', imageUrl: 'path/to/festival.jpg', dates: 'July 15-17', location: 'Downtown Park', lineup: ['Artist A', 'Artist B']})">
-                    Click here for festival details!
-                </div>
-            </section>
-
+                <button onclick="openModal({name: 'Summer Beats Festival', creatorName: 'Creator Name', imageUrl: 'assets/img/song.png', songPicture: ['picture', 'picture', 'picture'], songTitles : ['Song', 'Song', 'Song'], artistName : ['artist', 'artist', 'artist'], albumName: ['album', 'album', 'album'], times : ['0:00', '0.00', '0.00']})">
+                </button>
+            </section> -->
          </section>
+
          <section class="modal-overlay">
             <div id="playlistModal" class="modal">
                 <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <h1 id="PlaylistName"></h1>
-                    <img id="PlaylistImage" src="" alt="Playlist Image">
-                    <p id="festivalDates"></p>
-                    <p id="festivalLocation"></p>
-                    <div id="artistLineup"></div>
+                    <div class="title">
+                        <h1 id="PlaylistName"></h1>
+                        <h2 id="CreatorName"></h2>
+                        <img id="PlaylistImage" src="" alt="Playlist Image">
+                    </div>
+    
+                    <div class="songs">
+                        <!-- <div class="song">
+                            <img id="SongImage" src="" alt="Song Image">
+                            <h4 class="songTitle"></h4>
+                            <h4 class="artistName"></h4>
+                            <h4 class="albumName"></h4>
+                            <h4 class="times"></h4>
+                        </div>
+
+                        <div class="song">
+                            <img id="SongImage" src="" alt="Song Image">
+                            <h4 class="songTitle"></h4>
+                            <h4 class="artistName"></h4>
+                            <h4 class="albumName"></h4>
+                            <h4 class="times"></h4>
+                        </div>
+
+                        <div class="song">
+                            <img id="SongImage" src="" alt="Song Image">
+                            <h4 class="songTitle"></h4>
+                            <h4 class="artistName"></h4>
+                            <h4 class="albumName"></h4>
+                            <h4 class="times"></h4>
+                        </div> -->
+                        
+                    </div>
                 </div>
             </div>
          </section>
 
-         <div onclick="openModal({name: 'Summer Beats Festival', imageUrl: 'path/to/festival.jpg', dates: 'July 15-17', location: 'Downtown Park', lineup: ['Artist A', 'Artist B']})">
-            Click here for festival details!
-        </div>
+         
 
 
     </main>
