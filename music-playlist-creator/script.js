@@ -5,8 +5,6 @@ const span = document.querySelectorAll("song"); // array of songs
 //console.log(span);
 let count = 0;
 
-
-
 const openModal = (playlist) => {
     console.log(playlist);
    document.getElementById('PlaylistName').innerText = playlist.playlist_name;
@@ -15,6 +13,7 @@ const openModal = (playlist) => {
     // for the song element
 
    document.addEventListener("DOMContentLoaded", loadSongs(playlist));
+   
    
    modal.style.display = "block";
 }
@@ -36,6 +35,7 @@ const loadPlaylists = () => {
     document.querySelectorAll('.playlist-card').forEach(el => {
         console.log(el);
         el.addEventListener('click', (event) => {
+            event.stopPropagation();
             if (event.target.closest("button")) { 
                 return; // so it ignores the like button (i.e. like button is clickable)
             }
@@ -73,16 +73,21 @@ const loadSongs = (playlist) => {
     } else {
         container.innerHTML = "";
         for (const song of playlist.songs) {
-            const el = createSongElement(song);
+            const index = playlist.playlistId;
+            const el = createSongElement(song, index);
             container.append(el);
         }
     }
+
+    document.getElementById('shuffle-btn').addEventListener('click', handleShuffling(container)); // Event Listener
+    
 }
 
 
-const createSongElement = (song) => {
+const createSongElement = (song, index) => {
     
     const songElement = document.createElement('section');
+    songElement.id = index; // all songs for one playlist have the same id
     songElement.className = 'song';
     songElement.innerHTML = `
     <img id="SongImage" src="${song.song_art}" alt="Song Image">
@@ -99,6 +104,7 @@ const createSongElement = (song) => {
 // for likes
 const handleLikes = (button, playlist) => {
     const likes = document.querySelectorAll(".countLikes")[playlist];
+    console.log(likes);
     let likesCount = parseInt(likes.textContent, 10);
     const isLiked = button.getAttribute('liked') === 'true';; // to check whether to decrease or increase the count for likes
     if (isLiked) { // already has been clicked
@@ -110,7 +116,31 @@ const handleLikes = (button, playlist) => {
         likes.textContent = `${likesCount}`; 
         button.setAttribute('liked', 'true');
     }
+}
 
+// for shuffling
+const handleShuffling = (songs) => {
+    console.log(songs);
+    const allSongs = songs.querySelectorAll('.song');
+    const songArray = [...allSongs];
+
+    for (let i = 0; i < songArray.length; i++) {
+        console.log(songArray[i]);
+    }
+    // shuffling methodology
+    let index = songArray.length;
+
+    while (index != 0) {
+        let randomIndex = Math.floor(Math.random() * index);
+        index--;
+
+        [songArray[index], songArray[randomIndex]] = [songArray[randomIndex], songArray[index]];
+    }
+
+    for (let i = 0; i < songArray.length; i++) {
+        console.log(songArray[i]);
+    }
+    
 
 }
 
