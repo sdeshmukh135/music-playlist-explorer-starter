@@ -1,6 +1,6 @@
 let playlists = [
     {
-		"playlistId": 1, // first playlist object
+		"playlistId": 0, // first playlist object
 		"playlist_name": "Fun Stuff",
 		"playlist_author": "CoolPerson200",
 		"playlist_art": "assets/img/album1.jpeg",
@@ -26,7 +26,7 @@ let playlists = [
         ]
 	},
 	{
-        "playlistId": 2, // first playlist object
+        "playlistId": 1, // first playlist object
 		"playlist_name": "Even More Fun Stuff",
 		"playlist_author": "CoolPerson300",
 		"playlist_art": "assets/img/album2.jpeg",
@@ -52,7 +52,7 @@ let playlists = [
         ]
     },
     {
-        "playlistId": 3, // first playlist object
+        "playlistId": 2, // first playlist object
 		"playlist_name": "This is Fun",
 		"playlist_author": "CoolPerson400",
 		"playlist_art": "assets/img/album3.jpeg",
@@ -78,7 +78,7 @@ let playlists = [
         ]
     },
     {
-        "playlistId": 4, // first playlist object
+        "playlistId": 3, // first playlist object
 		"playlist_name": "More Fun",
 		"playlist_author": "CoolPerson340",
 		"playlist_art": "assets/img/album4.jpeg",
@@ -104,7 +104,7 @@ let playlists = [
         ]
     },
     {
-        "playlistId": 5, // first playlist object
+        "playlistId": 4, // first playlist object
 		"playlist_name": "Fun Stuff More",
 		"playlist_author": "CoolPerson405",
 		"playlist_art": "assets/img/album5.jpeg",
@@ -130,7 +130,7 @@ let playlists = [
         ]
     },
     {
-        "playlistId": 6, // first playlist object
+        "playlistId": 5, // first playlist object
 		"playlist_name": "Fun Stuff Yep",
 		"playlist_author": "CoolPerson204",
 		"playlist_art": "assets/img/album6.jpeg",
@@ -156,7 +156,7 @@ let playlists = [
         ]
     },
     {
-        "playlistId": 7, // first playlist object
+        "playlistId": 6, // first playlist object
 		"playlist_name": "Fun Stuff Definitely",
 		"playlist_author": "CoolPerson248",
 		"playlist_art": "assets/img/album7.png",
@@ -182,7 +182,7 @@ let playlists = [
         ]
     },
     {
-        "playlistId": 8, // first playlist object
+        "playlistId": 7, // first playlist object
 		"playlist_name": "Fun Stuff Finally",
 		"playlist_author": "CoolPerson234",
 		"playlist_art": "assets/img/album8.jpeg",
