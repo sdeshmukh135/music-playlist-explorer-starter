@@ -1,10 +1,10 @@
 // JavaScript for Opening and Closing the Modal (new screen)
 const modal = document.getElementById("playlistModal");
+const playlistModal = document.getElementById("editingModal");
 const span = document.querySelectorAll("song"); // array of songs
 
 
-//console.log(span);
-let count = 0;
+let count = 8; // starting at the eigth one to add an element, increment
 
 const openModal = (playlist) => {
     console.log(playlist);
@@ -15,9 +15,18 @@ const openModal = (playlist) => {
 
    document.addEventListener("DOMContentLoaded", loadSongs(playlist["songs"]));
    
-   
    modal.style.display = "block";
 }
+
+const openPlaylistModal = (playlist) => {
+    playlistModal.style.display = "block";
+    console.log("_______");
+    
+    document.getElementById('edit').addEventListener('click', () => handlePlaylistSubmit(playlist, "edit")); 
+    document.getElementById('add').addEventListener('click', () => handlePlaylistSubmit(playlist, "add")); 
+    
+}
+
 
 const loadPlaylists = () => {
     console.log("playlists loading")
@@ -43,6 +52,8 @@ const loadPlaylists = () => {
             openModal(playlists[el.id]); // send in a playlist object from reviews.js
         })
     })
+
+    //document.getElementById('editing-btn').addEventListener('click', () => openPlaylistModal); // Event Listener
 }
 
 const createPlaylistElement = (playlist) => {
@@ -53,9 +64,12 @@ const createPlaylistElement = (playlist) => {
     <img src="${playlist.playlist_art}"/>
     <h3>${playlist.playlist_name}</h3>
     <h4>${playlist.playlist_author}</h4>
+    
     <div class="likes">
-        <button liked="false" onclick="handleLikes(this, ${playlist.playlistId})"><img src="assets/img/heart-icon.webp"/></button>
+        <button id="editing-btn" onclick="openPlaylistModal(${playlist.playlistId})"><img src="assets/img/plus_sign.png"/></button>
+        <button id = 'heart' liked="false" onclick="handleLikes(this, ${playlist.playlistId})"><img src="assets/img/heart-icon.webp"/></button>
         <h4 class="countLikes">0</h4>
+        <button id="delete-btn" onclick="deletePlaylist(${playlist.playlistId})"><img src="assets/img/x-picture.webp"/></button>
     </div>
     `;
     
@@ -76,6 +90,9 @@ const loadSongs = (songs) => {
     } else {
         container.innerHTML = "";
         for (const song of songs) {
+            if (song === null) {
+                continue;
+            }
             const el = createSongElement(song);
             container.append(el);
         }
@@ -187,13 +204,101 @@ const randomFeature = () => {
     }
 }
 
+// for editingModal opening using button
+const handlePlaylistSubmit = (playlist, type) => { // index in case we are editing over a known 
+    console.log("______");
+    event.preventDefault();
+    const newPlaylist = {
+        "playlistId": count, // first playlist object
+		"playlist_name": document.getElementById('playlist-title').value,
+		"playlist_author": document.getElementById('playlist-author').value,
+		"playlist_art": document.getElementById('playlist-art').value, // placeholder (user does not provide)
+		"songs": [ // object inside of an object
+            {
+                "song_title": document.getElementById('song1-title').value,
+                "song_artist": document.getElementById('song1-author').value,
+                "duration": document.getElementById('song1-duration').value,
+                "song_art": "assets/img/song.png"
+            },
+            {
+                "song_title": document.getElementById('song2-title').value,
+                "song_artist": document.getElementById('song2-author').value,
+                "duration": document.getElementById('song2-duration').value,
+                "song_art": "assets/img/song.png"
+            },
+            {
+                "song_title": document.getElementById('song3-title').value,
+                "song_artist": document.getElementById('song3-author').value,
+                "duration": document.getElementById('song3-duration').value,
+                "song_art": "assets/img/song.png"
+            }
+        ]
+    };
+
+    if (type === 'edit') { // add in when delete code comes
+        const playElement = document.querySelectorAll(".playlist-card")[playlist]; // specific playlist
+        console.log(playElement);
+        // for the playlist itself
+        let img = playElement.querySelector('img');
+        img.src = document.getElementById('playlist-art').value; // new image
+        let playlistTitle = playElement.querySelector('h3');
+        playlistTitle.textContent = document.getElementById('playlist-title').value;
+        let playlistAuthor = playElement.querySelector("h4");
+        playlistAuthor.textContent = document.getElementById('playlist-author').value;
+
+        // for the modal
+        playElement.addEventListener('click', (event) => {
+            event.stopPropagation();
+            if (event.target.closest("button")) { 
+                return; // so it ignores the like button (i.e. like button is clickable)
+            }
+            document.getElementById('PlaylistName').innerText = document.getElementById('playlist-title').value;
+            document.getElementById('PlaylistImage').src = document.getElementById('playlist-art').value;
+            document.getElementById('CreatorName').innerText = document.getElementById('playlist-author').value;
+
+            const container = playElement.querySelector(".songs");
+            
+            //modal.style.display = "block";
+
+        })
+    } else if (type === 'add') {
+        const container = document.querySelector(".playlist-cards");
+        const el = createPlaylistElement(newPlaylist);
+        console.log(el);
+        container.append(el);
+
+        count++;
+    }
+
+    //event.target.reset();
+
+}
+
+// to delete a playlist
+const deletePlaylist = (playlist) => {
+    const playElement = document.querySelectorAll(".playlist-card")[playlist];
+    playElement.remove(); // delete playlist
+}
+
 // both functions for modal control
 
 span.onclick = function() {
    modal.style.display = "none";
+   playlistModal.style.display = "none";
 }
 window.onclick = function(event) {
    if (event.target == modal) {
       modal.style.display = "none";
+   } else if (event.target == playlistModal) {
+      playlistModal.style.display = "none";
    }
 }
+
+// span.onclick = function() {
+//    playlistModal.style.display = "none";
+// }
+// window.onclick = function(event) {
+//    if (event.target == playlistModal) {
+//       playlistModal.style.display = "none";
+//    }
+// }
