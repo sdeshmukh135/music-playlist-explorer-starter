@@ -2,6 +2,7 @@
 const modal = document.getElementById("playlistModal");
 const span = document.querySelectorAll("song"); // array of songs
 
+
 //console.log(span);
 let count = 0;
 
@@ -12,7 +13,7 @@ const openModal = (playlist) => {
    document.getElementById('CreatorName').innerText = playlist.playlist_author;
     // for the song element
 
-   document.addEventListener("DOMContentLoaded", loadSongs(playlist));
+   document.addEventListener("DOMContentLoaded", loadSongs(playlist["songs"]));
    
    
    modal.style.display = "block";
@@ -61,33 +62,32 @@ const createPlaylistElement = (playlist) => {
     return playElement;
 }
 
-document.addEventListener("DOMContentLoaded", loadPlaylists());
+if (document.getElementById("index")) {
+    document.addEventListener("DOMContentLoaded", loadPlaylists());
+}
 
 
 
-const loadSongs = (playlist) => {
-    console.log(playlist);
+const loadSongs = (songs) => {
+
     const container = document.querySelector(".songs");
-    if (playlist.songs === null) {
+    if (songs === null) {
         console.log("There are no songs present");
     } else {
         container.innerHTML = "";
-        for (const song of playlist.songs) {
-            const index = playlist.playlistId;
-            const el = createSongElement(song, index);
+        for (const song of songs) {
+            const el = createSongElement(song);
             container.append(el);
         }
     }
 
-    document.getElementById('shuffle-btn').addEventListener('click', handleShuffling(container)); // Event Listener
-    
+    document.getElementById('shuffle-btn').addEventListener('click', () => handleShuffling(songs)); // Event Listener
 }
 
 
-const createSongElement = (song, index) => {
+const createSongElement = (song) => {
     
     const songElement = document.createElement('section');
-    songElement.id = index; // all songs for one playlist have the same id
     songElement.className = 'song';
     songElement.innerHTML = `
     <img id="SongImage" src="${song.song_art}" alt="Song Image">
@@ -97,6 +97,23 @@ const createSongElement = (song, index) => {
         
     </div>
     <h4 class="times">${song.duration}</h4>
+    `;
+    return songElement;
+}
+
+// for featured element (for styling purposes)
+const createFeaturedSongElement = (song) => {
+    
+    const songElement = document.createElement('section');
+    songElement.className = 'featured_song';
+    songElement.innerHTML = `
+    <img id="FeaturedSongImage" src="${song.song_art}" alt="Featured Song Image">
+    <div class="FeaturedSongDetails">
+        <h4 class="featuredSongTitle">${song.song_title}</h4>
+        <h4 class="featuredArtistName">${song.song_artist}</h4>
+        
+    </div>
+    <h4 class="featuredTimes">${song.duration}</h4>
     `;
     return songElement;
 }
@@ -120,12 +137,11 @@ const handleLikes = (button, playlist) => {
 
 // for shuffling
 const handleShuffling = (songs) => {
-    console.log(songs);
-    const allSongs = songs.querySelectorAll('.song');
-    const songArray = [...allSongs];
+
+    const songArray = songs;
 
     for (let i = 0; i < songArray.length; i++) {
-        console.log(songArray[i]);
+        console.log(songs[i]);
     }
     // shuffling methodology
     let index = songArray.length;
@@ -141,9 +157,35 @@ const handleShuffling = (songs) => {
         console.log(songArray[i]);
     }
     
-
+    loadSongs(songArray);
 }
 
+// for featured page control
+const randomFeature = () => {
+    let ranNum = parseInt(Math.random() * (playlists.length)); // random number from 0 to 8 (exclusive)
+    const playlist = playlists[ranNum];
+
+    console.log(playlist);
+
+    document.getElementById('Playlist Name').innerText = playlist.playlist_name;
+    document.getElementById('Playlist Image').src = playlist.playlist_art;
+    document.getElementById('Creator Name').innerText = playlist.playlist_author;
+
+    const songs = playlist["songs"];
+
+    if (document.querySelector('.featured_songs') && document.querySelector('.feature-playlist')) {
+        const container = document.querySelector(".featured_songs") ;
+        if (songs === null) {
+            console.log("There are no songs present");
+        } else {
+            container.innerHTML = "";
+            for (const song of songs) {
+                const el = createFeaturedSongElement(song);
+                container.append(el);
+            }
+        }
+    }
+}
 
 // both functions for modal control
 

@@ -8,19 +8,19 @@ let playlists = [
             {
                 "song_title": "The Travelled Road",
                 "song_artist":"Evan Mack",
-                "duration": "20:00",
+                "duration": "20:10",
                 "song_art": "assets/img/song.png"
             },
             {
                 "song_title": "The Travelled Road",
                 "song_artist":"Evan Mack",
-                "duration": "20:00",
+                "duration": "20:14",
                 "song_art": "assets/img/song.png"
             },
             {
                 "song_title": "The Travelled Road",
                 "song_artist":"Evan Mack",
-                "duration": "20:00",
+                "duration": "20:23",
                 "song_art": "assets/img/song.png"
             }
         ]
@@ -34,19 +34,19 @@ let playlists = [
             {
                 "song_title": "Race",
                 "song_artist":"Unknown",
-                "duration": "20:00",
+                "duration": "20:33",
                 "song_art": "assets/img/song.png"
             },
             {
                 "song_title": "Race",
                 "song_artist":"Unknown",
-                "duration": "20:00",
+                "duration": "20:23",
                 "song_art": "assets/img/song.png"
             },
             {
                 "song_title": "Race",
                 "song_artist":"Unknown",
-                "duration": "20:00",
+                "duration": "20:56",
                 "song_art": "assets/img/song.png"
             }
         ]
@@ -60,19 +60,19 @@ let playlists = [
             {
                 "song_title": "Unaired",
                 "song_artist":"Hozier",
-                "duration": "20:00",
+                "duration": "20:45",
                 "song_art": "assets/img/song.png"
             },
             {
                 "song_title": "Unaired",
                 "song_artist":"Hozier",
-                "duration": "20:00",
+                "duration": "20:34",
                 "song_art": "assets/img/song.png"
             },
             {
                 "song_title": "Unaired",
                 "song_artist":"Hozier",
-                "duration": "20:00",
+                "duration": "20:56",
                 "song_art": "assets/img/song.png"
             }
         ]
@@ -86,19 +86,19 @@ let playlists = [
             {
                 "song_title": "Mind of Mine",
                 "song_artist":"Zayn",
-                "duration": "20:00",
+                "duration": "20:23",
                 "song_art": "assets/img/song.png"
             },
             {
                 "song_title": "Mine of Mine",
                 "song_artist":"Zayn",
-                "duration": "20:00",
+                "duration": "20:12",
                 "song_art": "assets/img/song.png"
             },
             {
                 "song_title": "Mind of Mine",
                 "song_artist":"Zayn",
-                "duration": "20:00",
+                "duration": "20:14",
                 "song_art": "assets/img/song.png"
             }
         ]
@@ -112,19 +112,19 @@ let playlists = [
             {
                 "song_title": "Don't Remember",
                 "song_artist":"Unknown",
-                "duration": "20:00",
+                "duration": "20:15",
                 "song_art": "assets/img/song.png"
             },
             {
                 "song_title": "Don't Remember",
                 "song_artist":"Unknown",
-                "duration": "20:00",
+                "duration": "20:14",
                 "song_art": "assets/img/song.png"
             },
             {
                 "song_title": "Don't Remeber",
                 "song_artist":"eiofno3ief",
-                "duration": "20:00",
+                "duration": "20:14",
                 "song_art": "assets/img/song.png"
             }
         ]
@@ -138,19 +138,19 @@ let playlists = [
             {
                 "song_title": "Untitled",
                 "song_artist":"SZA",
-                "duration": "20:00",
+                "duration": "20:13",
                 "song_art": "assets/img/song.png"
             },
             {
                 "song_title": "Untitled",
                 "song_artist":"SZA",
-                "duration": "20:00",
+                "duration": "20:24",
                 "song_art": "assets/img/song.png"
             },
             {
                 "song_title": "Untitled",
                 "song_artist":"SZA",
-                "duration": "20:00",
+                "duration": "20:24",
                 "song_art": "assets/img/song.png"
             }
         ]
@@ -164,19 +164,19 @@ let playlists = [
             {
                 "song_title": "IDK",
                 "song_artist":"Mac DeMarco",
-                "duration": "20:00",
+                "duration": "20:45",
                 "song_art": "assets/img/song.png"
             },
             {
                 "song_title": "IDK",
                 "song_artist":"Mac DeMarco",
-                "duration": "20:00",
+                "duration": "20:24",
                 "song_art": "assets/img/song.png"
             },
             {
                 "song_title": "IDK",
                 "song_artist":"Mac DeMarco",
-                "duration": "20:00",
+                "duration": "20:34",
                 "song_art": "assets/img/song.png"
             }
         ]
@@ -190,7 +190,7 @@ let playlists = [
             {
                 "song_title": "Eight Miles High",
                 "song_artist":"The Golding Earning",
-                "duration": "20:00",
+                "duration": "20:40",
                 "song_art": "assets/img/song.png"
             },
             {

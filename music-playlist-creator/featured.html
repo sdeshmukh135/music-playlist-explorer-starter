@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Featured Playlists</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id = "featured">
+    <header>
+        <!-- Your header content here -->
+         <h1>Music Playlist Explorer</h1>
+         <div class="buttons">
+            <button class="Featured" onclick="window.location.href='featured.html'">Featured</button>
+            <button class="HomePage" onclick="window.location.href='index.html'">Home Page</button>
+         </div>
+    </header>
+
+    <main>
+        <!-- Featured element goes here  -->
+         <section class="feature-playlist">
+            <div class="title">
+                <img id="Playlist Image" src="" alt="Featured Playlist Image">
+                    
+                <div class="featured_songs">
+                    <!-- Add songs dynamically here -->
+                        
+                </div>
+            </div>
+            <div class="feature_names">
+                <h1 id="Playlist Name"></h1>
+                <h2 id="Creator Name"> </h2>
+            </div> 
+    
+            
+         </section>
+    </main>
+
+    <footer>
+        <!-- Your footer content here -->
+
+    </footer>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            randomFeature(); // run this once the page fully loads
+        });
+    </script>
+    <script src="data/data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
