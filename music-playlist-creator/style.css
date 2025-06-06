@@ -15,6 +15,58 @@ main {
     font-family:'Courier New', Courier, monospace;
 }
 
+button[class="Featured"] {
+    font-family:'Courier New', Courier, monospace;
+    font-size:25px;
+}
+
+button[class="Home"] {
+    font-family:'Courier New', Courier, monospace;
+    font-size:25px;
+}
+
+#search-bar {
+    height:30px;
+    width: 200px;
+    margin:10px;
+    margin-top:20px;
+    border:2px black solid
+}
+
+.dropdown {
+    display:inline-block;
+}
+
+.options {
+    border: 1px solid black;
+    font-size: 20px;
+    width: 100px;
+    background-color:#B4BEC9;
+    font-family:'Courier New', Courier, monospace;
+}
+
+.dropdownButton {
+    font-family:'Courier New', Courier, monospace;
+    font-size:25px;
+    margin-top:25px
+}
+
+#drop-options {
+    display:none;
+}
+
+#drop-options.show {
+    display:block;
+    display:flex;
+    flex-direction:column;
+}
+
+.featureFooter {
+    background-color:#DEEFE7;
+    height:50px;
+}
+
+
 .feature_playlist {
     display:flex;
     justify-content: flex-end;
@@ -168,6 +220,24 @@ img {
     border:1px solid black
 }
 
+#addSongs {
+    display:flex;
+    flex-direction:column;
+    margin:10px;
+}
+
+button[type='submit'] {
+    border: 1px solid black;
+    font-family:'Courier New', Courier, monospace;
+    background-color:#DEEFE7;
+}
+
+button[type='button'] {
+    border: 1px solid black;
+    font-family:'Courier New', Courier, monospace;
+    background-color:#DEEFE7;
+}
+
 /* for the button */
 button {
     background-color: Transparent;
@@ -175,7 +245,9 @@ button {
 }
 
 #heart:hover {
-   background-image: url("black-heart.webp");
+   
+   background-image: url("assets/img/black-heart.webp"); 
+   background-size:contain;
    text-decoration: none;
    cursor: pointer;
 }

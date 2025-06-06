@@ -9,21 +9,22 @@ let playlists = [
                 "song_title": "The Travelled Road",
                 "song_artist":"Evan Mack",
                 "duration": "20:10",
-                "song_art": "assets/img/song.png"
+                "song_art": "assets/img/song1.jpeg"
             },
             {
                 "song_title": "The Travelled Road",
                 "song_artist":"Evan Mack",
                 "duration": "20:14",
-                "song_art": "assets/img/song.png"
+                "song_art": "assets/img/song2.webp"
             },
             {
                 "song_title": "The Travelled Road",
                 "song_artist":"Evan Mack",
                 "duration": "20:23",
-                "song_art": "assets/img/song.png"
+                "song_art": "assets/img/song3.png"
             }
-        ]
+        ],
+        "likes":Math.floor(Math.random() * 100)
 	},
 	{
         "playlistId": 1, // first playlist object
@@ -49,7 +50,8 @@ let playlists = [
                 "duration": "20:56",
                 "song_art": "assets/img/song.png"
             }
-        ]
+        ],
+        "likes":Math.floor(Math.random() * 100)
     },
     {
         "playlistId": 2, // first playlist object
@@ -75,7 +77,8 @@ let playlists = [
                 "duration": "20:56",
                 "song_art": "assets/img/song.png"
             }
-        ]
+        ],
+        "likes":Math.floor(Math.random() * 100)
     },
     {
         "playlistId": 3, // first playlist object
@@ -101,7 +104,8 @@ let playlists = [
                 "duration": "20:14",
                 "song_art": "assets/img/song.png"
             }
-        ]
+        ],
+        "likes":Math.floor(Math.random() * 100)
     },
     {
         "playlistId": 4, // first playlist object
@@ -127,7 +131,8 @@ let playlists = [
                 "duration": "20:14",
                 "song_art": "assets/img/song.png"
             }
-        ]
+        ],
+        "likes":Math.floor(Math.random() * 100)
     },
     {
         "playlistId": 5, // first playlist object
@@ -153,7 +158,8 @@ let playlists = [
                 "duration": "20:24",
                 "song_art": "assets/img/song.png"
             }
-        ]
+        ],
+        "likes":Math.floor(Math.random() * 100)
     },
     {
         "playlistId": 6, // first playlist object
@@ -179,7 +185,8 @@ let playlists = [
                 "duration": "20:34",
                 "song_art": "assets/img/song.png"
             }
-        ]
+        ],
+        "likes":Math.floor(Math.random() * 100)
     },
     {
         "playlistId": 7, // first playlist object
@@ -205,6 +212,7 @@ let playlists = [
                 "duration": "20:00",
                 "song_art": "assets/img/song.png"
             }
-        ]
+        ],
+        "likes":Math.floor(Math.random() * 100)
     }
 ]

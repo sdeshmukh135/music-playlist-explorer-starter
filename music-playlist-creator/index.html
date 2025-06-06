@@ -14,8 +14,17 @@
         <!-- Your header content here -->
          <h1>Music Playlist Explorer</h1>
          <div class="buttons">
+            <input type="text" id="search-bar" name="search-bar" placeholder= "Search" required>
+            <div class="dropdown">
+                <button onclick="dropdown()" class="dropdownButton">Sort</button>
+                <div id = 'drop-options'>
+                    <button onclick="sort('Name')" class="options">Name</button>
+                    <button onclick="sort('Likes')" class="options">Likes</button>
+                    <button onclick="sort('Date')" class="options">Date</button>
+                </div>
+            </div>
             <button class="Featured" onclick="window.location.href='featured.html';randomFeature()">Featured</button>
-            <button class="Home Page" onclick="window.location.href='index.html'">Home Page</button>
+            <button class="Home" onclick="window.location.href='index.html'">Home</button>
          </div>
          
     </header>
@@ -56,26 +65,18 @@
                             <input type="text" id="playlist-author" name="playlist-author" required>
                             <label for="playlist-art">Playlist Picture:</label>
                             <input type="text" id="playlist-art" name="playlist-art" required>
-                            <label for="song1-title">Title of Song 1:</label>
-                            <input type="text" id="song1-title" name="song1-title" required>
-                            <label for="song1-author">Creator of Song 1:</label>
-                            <input type="text" id="song1-author" name="song1-author" required>
-                            <label for="song1-duration">Length of Song 1:</label>
-                            <input type="text" id="song1-duration" name="song1-duration" required>
-                            <label for="song2-title">Title of Song 2:</label>
-                            <input type="text" id="song2-title" name="song2-title" required>
-                            <label for="song2-author">Creator of Song 2:</label>
-                            <input type="text" id="song2-author" name="song2-author" required>
-                            <label for="song2-duration">Length of Song 2:</label>
-                            <input type="text" id="song2-duration" name="song2-duration" required>
-                            <label for="song3-title">Title of Song 3:</label>
-                            <input type="text" id="song3-title" name="song3-title" required>
-                            <label for="song3-author">Creator of Song 3:</label>
-                            <input type="text" id="song3-author" name="song3-author" required>
-                            <label for="song3-duration">Length of Song 3:</label>
-                            <input type="text" id="song3-duration" name="song3-duration" required>
+                            <h2>Add a Song to Your Playlist!</h2>
+                            <div id="addSongs">
+                                <label for="song-title">Title of Song:</label>
+                                <input type="text" id="song-title" name="song-title" required>
+                                <label for="song1-author">Creator of Song:</label>
+                                <input type="text" id="song-author" name="song-author" required>
+                                <label for="song1-duration">Length of Song:</label>
+                                <input type="text" id="song-duration" name="song-duration" required>
+                            </div>
 
                             <div class="submissionButtons">
+                                <button id = "addSong" type="button">Add Song</button>
                                 <button id = "edit" type="submit">Edit Current Playlist</button>
                                 <button id = "add" type="submit">Add New Playlist</button>
                             </div>
