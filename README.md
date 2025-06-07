@@ -1,12 +1,12 @@
-📝 `NOTE` Use this template to initialize the contents of a README.md file for your application. As you work on your assignment over the course of the week, update the required or stretch features lists to indicate which features you have completed by changing `[ ]` to `[x]`. (🚫 Remove this paragraph before submitting your assignment.)
+
 
 ## Unit Assignment: Music Playlist Explorer
 
 Submitted by: **Sara Deshmukh**
 
-Estimated time spent: **10** hours spent in total
+Estimated time spent: **18** hours spent in total
 
-Deployed Application (**required**): [Music Playlist Explorer Deployed Site](ADD_LINK_HERE)
+Deployed Application (**required**): https://music-playlist-explore.onrender.com/
 
 ### Application Features
 
@@ -50,14 +50,30 @@ Deployed Application (**required**): [Music Playlist Explorer Deployed Site](ADD
     - [x] If previously liked:
       - [x] The like count on the playlist tile should decrease by 1.
       - [x] There should be visual feedback (such as the heart turning a different color) to show that the playlist has been unliked by the user.
-    - [ ] **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS:** In addition to showcasing the above features, for ease of grading, please film yourself liking and unliking:
+    - [x] **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS:** In addition to showcasing the above features, for ease of grading, please film yourself liking and unliking:
       - [x] a playlist with a like count of 0
       - [x] a playlist with a non-zero like count
+        <div>
+    <a href="https://www.loom.com/share/6a38accc764c46b78ddfbb3a324e1781">
+      <p>Music Playlist Explorer - 6 June 2025 - Watch Video</p>
+    </a>
+    <a href="https://www.loom.com/share/6a38accc764c46b78ddfbb3a324e1781">
+      <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/6a38accc764c46b78ddfbb3a324e1781-dedad178d1732cf4-full-play.gif">
+    </a>
+  </div>
 
 - [x] **Shuffle Songs**
   - [x] Enable users to shuffle the songs within a playlist using a shuffle button in the playlist's detail modal.
   - [x] When the shuffle button is clicked, the playlist's songs should display in a different order.
-  - [x] **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS:** In addition to showcasing the above features, for ease of grading, please show yourself shuffling the same playlist more than once. 
+  - [x] **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS:** In addition to showcasing the above features, for ease of grading, please show yourself shuffling the same playlist more than once.
+        <div>
+    <a href="https://www.loom.com/share/8ef03c4c220c46489383347a69277256">
+      <p>Music Playlist Explorer - 6 June 2025 - Watch Video</p>
+    </a>
+    <a href="https://www.loom.com/share/8ef03c4c220c46489383347a69277256">
+      <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/8ef03c4c220c46489383347a69277256-0077fcc98390663b-full-play.gif">
+    </a>
+  </div>
   
 - [x] **Featured Page**
   - [x] Application includes a dedicated page that randomly selects and displays a playlist, showing the playlist’s:
@@ -70,8 +86,16 @@ Deployed Application (**required**): [Music Playlist Explorer Deployed Site](ADD
   - [x] When the page is refreshed or reloaded, a new random playlist is displayed
     - For example, navigating to the all playlists page and then back to the featured playlist page should result in a new random playlist being displayed
     - Note that because your algorithm will not be truly random, it is possible that the same playlist will feature twice in a row. 
-    - [ ] **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS:** In addition to showcasing the above features, for ease of grading, please show yourself refreshing the featured page more than once. 
-  - [x] Application includes a navigation bar or some other mechanism such that users can navigate to the page with all playlists from the featured page and vice versa without using the browser's back and forward buttons. 
+    - [x] **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS:** In addition to showcasing the above features, for ease of grading, please show yourself refreshing the featured page more than once. 
+  - [x] Application includes a navigation bar or some other mechanism such that users can navigate to the page with all playlists from the featured page and vice versa without using the browser's back and forward buttons.
+     <div>
+    <a href="https://www.loom.com/share/7fc89382399a4160bc60552b2d57002f">
+      <p>Music Playlist Explorer - 6 June 2025 - Watch Video</p>
+    </a>
+    <a href="https://www.loom.com/share/7fc89382399a4160bc60552b2d57002f">
+      <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/7fc89382399a4160bc60552b2d57002f-63f6bcee54dd6c2a-full-play.gif">
+    </a>
+  </div>
 
 #### STRETCH FEATURES
 
@@ -85,7 +109,15 @@ Deployed Application (**required**): [Music Playlist Explorer Deployed Site](ADD
       - [x] Title
       - [x] Artist
   - [x] The resulting playlist should display in the grid view.
-  - [ ] **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS:** For ease of grading, please show yourself adding at least two songs to the playlist. 
+  - [x] **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS:** For ease of grading, please show yourself adding at least two songs to the playlist.
+    <div>
+    <a href="https://www.loom.com/share/e2e3b4702b544e5ca22ef69b40a51d4e">
+      <p>Music Playlist Explorer - 6 June 2025 - Watch Video</p>
+    </a>
+    <a href="https://www.loom.com/share/e2e3b4702b544e5ca22ef69b40a51d4e">
+      <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/e2e3b4702b544e5ca22ef69b40a51d4e-60c436b6efaaa199-full-play.gif">
+    </a>
+  </div>
 
 - [x] **Edit Existing Playlists**
   - [x] Enable users to modify the details of existing playlists.
@@ -95,9 +127,17 @@ Deployed Application (**required**): [Music Playlist Explorer Deployed Site](ADD
     - [x] Author
     - [x] Songs
   - [x] The playlist grid view and playlist detail modal should update to display any changes (see Required Features, Criterion 1 & 2).
-  - [ ] **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS:** For ease of grading, please show yourself:
-    - [ ] Editing all of a playlist's features (name, creator, AND songs)
-    - [ ] Editing some of a playlist's features (name, creator, OR songs) 
+  - [x] **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS:** For ease of grading, please show yourself:
+    - [x] Editing all of a playlist's features (name, creator, AND songs)
+    - [x] Editing some of a playlist's features (name, creator, OR songs)
+        <div>
+    <a href="https://www.loom.com/share/05c2d8cc3252431fa9656c0f4241c53c">
+      <p>Music Playlist Explorer - 6 June 2025 - Watch Video</p>
+    </a>
+    <a href="https://www.loom.com/share/05c2d8cc3252431fa9656c0f4241c53c">
+      <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/05c2d8cc3252431fa9656c0f4241c53c-0bd26a5f171f6fe0-full-play.gif">
+    </a>
+  </div>
 
 - [x] **Delete Playlists**
   - [x] Add a delete button to each playlist tile within the grid view.
@@ -132,8 +172,6 @@ Deployed Application (**required**): [Music Playlist Explorer Deployed Site](ADD
 
 ### Walkthrough Video
 
-`TODO://` Add the embedded URL code to your animated app walkthrough below, `ADD_EMBEDDED_CODE_HERE`. Make sure the video actually renders and is playable when viewing this README. Ensure your walkthrough showcases the presence and/or functionality of all features you implemented above (check them off as you film!). Pay attention to any **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS** checkboxes listed above to ensure graders see the full functionality of your website! (🚫 Remove this paragraph after adding walkthrough video)
-
 <div>
     <a href="https://www.loom.com/share/c9fbad2504b3498497fb15a952872e7c">
       <p>Music Playlist Explorer - 6 June 2025 - Watch Video</p>
@@ -142,7 +180,6 @@ Deployed Application (**required**): [Music Playlist Explorer Deployed Site](ADD
       <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/c9fbad2504b3498497fb15a952872e7c-b07f51985e28f79f-full-play.gif">
     </a>
   </div>
-  <div style="position: relative; padding-bottom: 50.9375%; height: 0;"><iframe src="https://www.loom.com/embed/c9fbad2504b3498497fb15a952872e7c?sid=65dc0da9-0bfe-4408-abc6-de4cc5557bf9" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
 
 ### Reflection
 
