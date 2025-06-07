@@ -238,6 +238,16 @@ button[type='button'] {
     background-color:#DEEFE7;
 }
 
+.search-btn {
+    font-family:'Courier New', Courier, monospace;
+    font-size:25px;
+}
+
+.clear-btn {
+    font-family:'Courier New', Courier, monospace;
+    font-size:25px;
+}
+
 /* for the button */
 button {
     background-color: Transparent;

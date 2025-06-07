@@ -57,6 +57,38 @@ const handleSearch = (event) => {
     }
 }
 
+const handleSearchButton = () => {
+    const searchtext = document.getElementById('search-bar').value.toLowerCase();
+    const currentPlaylists = document.querySelectorAll(".playlist-card");
+   
+    for (let i = 0; i < playlists.length; i++) { // doesn't account for mixing with adding or deleting
+            
+        const playlist = currentPlaylists[i];
+            
+        const title = playlist.querySelector("h3").textContent;
+        const author = playlist.querySelector("h4").textContent;
+
+
+        if (!(title.toLowerCase().includes(searchtext) || author.toLowerCase().includes(searchtext))) {
+            // doesn't fit search criteria
+            playlist.style.display = "none";
+        }
+    }
+
+
+}
+
+const clearText = () => {
+    const currentPlaylists = document.querySelectorAll(".playlist-card");
+    
+    for (let i = 0; i < playlists.length; i++) {
+        const playlist = currentPlaylists[i];
+        playlist.style.display = "block";
+    }
+
+    document.getElementById('search-bar').value = ""; // to clear the block
+
+}
 
 const loadPlaylists = () => {
     console.log("playlists loading")
@@ -67,7 +99,7 @@ const loadPlaylists = () => {
     } else {
         container.innerHTML = "";
         for (const playlist of playlists) {
-            const el = createPlaylistElement(playlist);
+            const el = createPlaylistElement(playlist, index);
             container.append(el);
         }
     }
@@ -84,7 +116,6 @@ const loadPlaylists = () => {
         })
     })
 
-    //document.getElementById('editing-btn').addEventListener('click', () => openPlaylistModal); // Event Listener
 }
 
 const createPlaylistElement = (playlist) => {
